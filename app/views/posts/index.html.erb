@@ -1,6 +1,8 @@
 <nav class="navbar">
   <div class="container-fluid">
-    <span class="navbar-brand" style="margin-left: 6em;" ><h1>InSnapx</h1></span>
+    <span class="navbar-brand" style="margin-left: 6em;" >
+      <a href="/posts" class="logo"><h1>InSnapx</h1></a>
+    </span>
       <% if current_user %>
       <ul class="nav nav-pills">
         <li><img src="<%= current_user.image_url %>"/></li>
@@ -42,7 +44,13 @@
         <img src="<%= post.image_url %>"/>
     </div>
     <div class="card-body text-secondary">
-      <span><div><img src="<%= post.user.image_url %>"/> <%= post.user.name %></div> <%= post.created_at.strftime("%Y-%m-%d") %></span>
+      <span>
+        <div>
+          <a href="users/<%= post.user.id%>"><img src="<%= post.user.image_url %>"/></a>
+          <a href="users/<%= post.user.id%>"><%= post.user.name %></a>
+        </div>
+        <%= post.created_at.strftime("%Y-%m-%d") %>
+      </span>
       <p>"<%= post.content %>"</p>
     </div>
   </div>
