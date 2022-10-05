@@ -46,8 +46,12 @@
     <div class="card-body text-secondary">
       <span>
         <div>
-          <a href="users/<%= post.user.id%>"><img src="<%= post.user.image_url %>"/></a>
-          <a href="users/<%= post.user.id%>"><%= post.user.name %></a>
+          <a href="users/<%= post.user.id%>">
+            <img src="<%= post.user.image_url %>"/>
+          </a>
+          <a href="users/<%= post.user.id%>">
+            <%= post.user.name %>
+          </a>
         </div>
         <%= post.created_at.strftime("%Y-%m-%d") %>
       </span>
