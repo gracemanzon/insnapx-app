@@ -1,0 +1,54 @@
+<nav class="navbar">
+  <div class="container-fluid">
+    <span class="navbar-brand" style="margin-left: 6em;" ><h1>InSnapx</h1></span>
+      <% if current_user %>
+      <ul class="nav nav-pills">
+        <li><img src="<%= current_user.image_url %>"/></li>
+        <li class="nav-item dropdown main-nav" style="margin-right: 6em;">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><%= current_user.name %></a>
+            <ul class="dropdown-menu">
+              <li><a href="/users/<%= current_user.id %> ">Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><%= link_to "Create Post", new_post_path %></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><%= link_to "Logout", session_path(session), data: {turbo_method: :delete, turbo_confirm: "Confirm to Logout"} %></li>
+            </ul>
+          </li>
+      </ul>
+      <% else %>
+      <ul class="nav nav-pills">
+        <li class="nav-item dropdown main-nav" style="margin-right: 6em;">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Account</a>
+            <ul class="dropdown-menu">
+              <li class="nav-item dropdown" >
+              <%= link_to "Login", new_session_path %>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li class="nav-item dropdown">
+              <%= link_to "Sign Up", new_user_path %>
+              </li>
+            </ul>
+          </li>
+      </ul>
+      <% end %>
+  </div>
+</nav>
+
+<div class="posts-container">
+<% @posts.each do |post| %>
+  <div class="card">
+    <div class="img-container">
+        <span class="vignette-inset"></span>
+        <img src="<%= post.image_url %>"/>
+    </div>
+    <div class="card-body text-secondary">
+      <span><div><img src="<%= post.user.image_url %>"/> <%= post.user.name %></div> <%= post.created_at.strftime("%Y-%m-%d") %></span>
+      <p>"<%= post.content %>"</p>
+    </div>
+  </div>
+<% end %>
+</div>
+
+
+  <%# <%= link_to "Edit Post", edit_post_path(post) %>
+  <%# <%= link_to "Destroy Post", post_path(post), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
