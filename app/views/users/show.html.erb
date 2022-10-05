@@ -1,11 +1,13 @@
 <nav class="navbar">
   <div class="container-fluid">
-    <span class="navbar-brand" style="margin-left: 6em;" ><h1>InSnapx</h1></span>
+    <span class="navbar-brand" style="margin-left: 6em;" >
+      <a href="/posts" class="logo"><h1>InSnapx</h1></a>
+    </span>
       <% if current_user %>
       <ul class="nav nav-pills">
-        <li><img src="<%= current_user.image_url %>"/></li>
+        <li><img src="<%= current_user.image_url %>" alt="user avatar"/></li>
         <li class="nav-item dropdown main-nav" style="margin-right: 6em;">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><%= current_user.name %></a>
+            <a class="nav-link dropdown-toggle user-nav" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><%= current_user.name %></a>
             <ul class="dropdown-menu">
               <li><a href="/users/<%= current_user.id %> ">Profile</a></li>
               <li><hr class="dropdown-divider"></li>
@@ -47,7 +49,7 @@
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. </p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
     </div>

@@ -5,9 +5,9 @@
     </span>
       <% if current_user %>
       <ul class="nav nav-pills">
-        <li><img src="<%= current_user.image_url %>"/></li>
+        <li><img src="<%= current_user.image_url %>" alt="user avatar"/></li>
         <li class="nav-item dropdown main-nav" style="margin-right: 6em;">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><%= current_user.name %></a>
+            <a class="nav-link dropdown-toggle user-nav" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><%= current_user.name %></a>
             <ul class="dropdown-menu">
               <li><a href="/users/<%= current_user.id %> ">Profile</a></li>
               <li><hr class="dropdown-divider"></li>
