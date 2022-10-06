@@ -1,8 +1,8 @@
-User.create(name: "diana", image_url: "https://thumbs.dreamstime.com/b/default-placeholder-profile-icon-avatar-gray-woman-90197997.jpg", email: "diana@email.com", password: "password")
+User.create(name: "diana", image_url: "https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", email: "diana@email.com", password: "password")
 
-User.create(name: "bobby", image_url: "https://nullchiropractic.com/wp-content/uploads/2017/11/profile-default-male.jpg", email: "bobby@email.com", password: "password")
+User.create(name: "bobby", image_url: "https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", email: "bobby@email.com", password: "password")
 
-User.create(name: "zeke", image_url: "https://previews.123rf.com/images/triken/triken1608/triken160800029/61320775-male-avatar-profile-picture-default-user-avatar-guest-avatar-simply-human-head-vector-illustration-i.jpg", email: "zeke@email.com", password: "password")
+User.create(name: "zeke", image_url: "https://images.pexels.com/photos/1182292/pexels-photo-1182292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", email: "zeke@email.com", password: "password")
 
 Post.create(user_id: 1, image_url: "https://media.gettyimages.com/photos/portrait-of-female-athlete-looking-over-shoulder-on-sunny-day-picture-id1316107204?k=20&m=1316107204&s=612x612&w=0&h=UxQX2xxJOpXcv7k5Jiy20HUlvy018l32939vgGG61ww=", content: "this a post by diana(1)")
 
