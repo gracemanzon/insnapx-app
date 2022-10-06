@@ -17,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
     <style>
 
@@ -24,6 +25,7 @@
 
     body {
       background-color: #f7edea;
+      font-family: "Open Sans";
     }
 
     nav {
@@ -40,7 +42,7 @@
     }
 
     .logo:hover {
-      color: #383838;
+      color: #0288d1;
     }
 
     nav img {
@@ -54,13 +56,28 @@
     }
 
     .user-nav:hover {
-      color: #383838;
+      color: #0288d1;
     }
     
     .main-nav a {
       color: black;
       text-decoration: none;
       margin-left: 1em;
+    }
+
+    .nav-user-img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-user-img img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
     }
 
     .posts-container {
@@ -103,20 +120,36 @@
       object-fit: cover;
     }
 
+    .card-body {
+      padding: 0.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-    .card-body span {
+    .post-user {
       font-family: 'Permanent Marker', cursive;
       font-size: 24px;
       color: #383838;
       display: flex;
       justify-content: space-between;
-      margin: 0 6px 12px 6px;
+      margin: 0 8px 3px 8px;
     }
 
-    .card-body span img {
-      width: 42px;
+    .post-user-img-container {
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      margin-right: 6px;
+      display: flex;
+      justify-content: center;
+      margin-right: 12px;
+    }
+
+    .post-user-img-container a img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
     }
 
     .card-body span a {
@@ -124,72 +157,77 @@
       text-decoration: none;
     }
 
-    .card-body span p {
-      margin: 0;
+    .card-body span:nth-child(2) {
       font-size: 18px;
+      padding-top: 8px;
     }
+
+    .card-body p {
+      margin: 0 14px 3px 14px;
+      font-size: 16px;
+    }
+
+    .heart-likes {
+      display: flex;
+      align-items: center;
+      margin: 0 14px;
+    }
+
     
 
     /* USER SHOW  */
     .about {
-      /* font-family: "Permanent Marker"; */
+      padding: 0 2em 0 4em;
+      border-right: solid 1px black;
     }
 
-    .about img {
-      margin-left: 2em;
+    .about-img-container {
+      width: 250px;
+      height: 250px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-img-container img {
+      width: 250px;
+      height: 250px;
+      border-radius: 6px;
+      object-fit: cover;
     }
 
     .about h2 {
       font-family: "Permanent Marker";
       font-size: 23px;
-      padding-left: 1.5em;
       margin: 0;
     }
 
     .about p {
       margin: 0;
-      padding-left: 3em;
-    }
-
-    .user-contact {
-      margin: 1em 0 3em 0;
     }
 
     .posts-container-alt {
-      margin: 1em 2em 1em 8em;
+      margin-top: 0;
+      margin-bottom: 6em;
       display: flex;
-      /* justify-content: center; */
+      justify-content: center;
       flex-wrap: wrap;
     }
 
-    .card-alt {
-      margin: 2em;
-      width: 386px;
-      height: 520px;
-      border: solid 1px #d0d0d0;
-      border-radius: 6px;
-      box-shadow: 5px 8px 10px #d0d0d0;
-      background-color: #f9f8f4;
-    }
-
-    .body-alt {
-      margin: 1em;
-    }
-
-    .body-alt span h3 {
-      font-size: 21px;
-    }
-
-    .body-alt p {
-      margin: 0 8px 2px 8px;
+    .user-contact {
+      margin: 3em 0;
     }
 
     .user-settings {
-      margin: 2.5em;
+      margin: 2.5em 0;
 
     }
 
     .user-settings-links {
+      font-family: "Open Sans";
+      font-size: 16px;
+      margin-top: 10px;
+      margin-right: 10px;
       color: #383838;
       font-weight: bold;
       text-decoration: none;
