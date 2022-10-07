@@ -7,7 +7,7 @@
       <ul class="nav nav-pills">
         <li><div class="nav-user-img"><img src="<%= current_user.image_url %>" alt="user avatar"/></div></li>
         <li class="nav-item dropdown main-nav" style="margin-right: 6em;">
-            <a class="nav-link dropdown-toggle user-nav" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><%= current_user.name %></a>
+            <a class="nav-link dropdown-toggle user-nav" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><%= current_user.user_name %></a>
             <ul class="dropdown-menu">
               <li><a href="/users/<%= current_user.id %> ">Profile</a></li>
               <li><hr class="dropdown-divider"></li>
@@ -44,15 +44,19 @@
         <img src="<%= @user.image_url %>" alt="user avatar">
       </div>
       <div class="user-contact">
-        <h2> "user.username" </h2>
+        <h2> <%= @user.user_name %> </h2>
+        <p class="text-muted">Account: <%= @user.account_type %></p>
         <p class="text-muted"><%= @user.name %></p>
         <p class="text-muted"><%= @user.email %></p>
       </div>
       <div class="card-body-alt">
-        <h2 class="card-text text-muted"> "user.tagline" </h2>
-        <p class="card-text text-muted"> "user.bio" </p>
+        <h2 class="card-text text-muted"> "<%= @user.tagline %>" </h2>
+        <p class="card-text text-muted"> <%= @user.biography %> </p>
       </div>
-
+      <div class="bookings">
+        <p class="user-settings-links">Available Bookings</p>
+        <p class="user-settings-links">Upcoming Events</p>
+      </div>
       <% if @user.id == current_user.id %>
       <div class="user-settings">
         <%= link_to "Edit Profile", edit_user_path, {:class => "user-settings-links"} %>
@@ -62,6 +66,7 @@
     </div>
 
     <div class="col">
+    <div class="header"><h1>Portfolio</h1></div>
 
 <div class="posts-container-alt">
 <% @user.posts.each do |post| %>
