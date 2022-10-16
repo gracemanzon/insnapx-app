@@ -18,6 +18,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <%# FONT AWESOME %>
+    <script src="https://kit.fontawesome.com/fcdc21f4c7.js" crossorigin="anonymous"></script>
+    <%# nylas agenda component  %>
+    <script src="https://unpkg.com/@nylas/components-agenda"></script>
 
     <style>
 
@@ -168,13 +172,20 @@
       font-size: 16px;
     }
 
-    .heart-likes {
-      display: flex;
-      align-items: center;
-      margin: 0 14px;
+    .icons {
+      margin: 0.25em 1em;
     }
 
-    
+    .icons a{
+      font-size: 18px;
+      color: #383838;
+      text-decoration: none;
+    }
+
+    .icons a:hover {
+      color: #0288d1;
+
+    }
 
     /* USER SHOW  */
     .header {
@@ -246,6 +257,10 @@
     
     .user-settings-links:hover {
       color: #0288d1;
+    }
+
+    .user-post-settings {
+      margin: 0 1em;
     }
 
     </style>

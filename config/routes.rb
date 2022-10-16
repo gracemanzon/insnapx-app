@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   resources :posts
 
+  resources :posts do
+    resources :comments
+  end
+
   resources :users
   get "/users" => "users#index"
   get "/signup" => "users#new"
