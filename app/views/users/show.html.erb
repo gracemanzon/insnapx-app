@@ -54,13 +54,15 @@
         <h2 class="card-text text-muted"> "<%= @user.tagline %>" </h2>
         <p class="card-text text-muted"> <%= @user.biography %> </p>
       </div>
-      <div class="bookings" style="height: 625px; margin-top: 132px;">
+      <div class="bookings" style="height: 645px; margin-top: 132px;">
         <nylas-agenda id="4ef20193-fe1a-48e2-b14b-5b15243222cd" > </nylas-agenda> 
+
+
       </div>
       <% if @user.id == current_user.id %>
       <div class="user-settings">
         <%= link_to "Edit Profile", edit_user_path, {:class => "user-settings-links"} %>
-        <button id="schedule-editor" class="user-settings-links" style="border: none; background-color: transparent; padding: 0;">Launch Schedule Editor</button> 
+        <%# <button id="schedule-editor" class="user-settings-links" style="border: none; background-color: transparent; padding: 0;">Launch Schedule Editor</button>  %>
       </div>
       <% end %>
 
