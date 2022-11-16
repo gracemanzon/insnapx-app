@@ -1,24 +1,35 @@
-# README
+# InSnapx
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A portfolio app for retro camera lovers developed with full-stack Rails. Using the Nylas gem visitors can schedule consultations with artists and artists can connect their Google calendars to let their patrons know what upcoming events and conventions they will be attending.
 
-Things you may want to cover:
+- Full-stack Ruby on Rails RESTful API with MVC architecture
+- User authentication using bcrypt gem
+- Index and show views utilizing the jbuilder gem and Bootstrap framework
+- Google calendar based scheduling and agenda component from Nylas gem
 
-* Ruby version
+![screenshot](/assets/insnapx-preview2.png)
 
-* System dependencies
+## Installation
 
-* Configuration
+- ruby 3.1.2
+- rails 7.0.4
+- gem "jbuilder"
+- gem "bcrypt", "~> 3.1.7"
+- gem "nylas"
 
-* Database creation
+```bash
+bundle install
+rails db:create db:migrate db:seed
+```
 
-* Database initialization
+## Usage
 
-* How to run the test suite
+```bash
+rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Roadmap
 
-* Deployment instructions
-
-* ...
+- Change calendar integration
+- Comment model belonging to each post
+- Photographer/Model account types
